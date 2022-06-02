@@ -48,10 +48,11 @@ let entireTxt = document.body.innerText;
 console.log(entireTxt);
 const txtArray = entireTxt.split('\n');
 console.log(txtArray);
-/*for (let i = 0 ; i < txtArray.lentgh ; i++){
-    console.log(txtArray[i]);
-    txtArray[i].addEventListener('click', function(){
-        txtArray[i] = "shrimp";
-        
-    })
+const spans = [];
+/*for (let i = 0 ; i < txtArray.length ; i++){
+    //console.log(txtArray[i]);
+    txtArray[i] = `<span class="loop">${txtArray.innerText}</span>`;
+    spans.push(txtArray[i]);
+    //console.log(spans);
 }*/
+
