@@ -26,5 +26,8 @@ challengeBox.addEventListener('click',function(){
     image.style.width = "50px";
     image.style.height = "50px";
     image.style.position = "absolute";
+    image.style.left = `${Math.round(Math.random()*challengeBoxRect.width)+challengeBoxRect.x}px`;
+    image.style.top = `${Math.round(Math.random()*challengeBoxRect.height)+ challengeBoxRect.y}px`;
     challengeBox.appendChild(image);
+    console.log(image.style.left)
 })
