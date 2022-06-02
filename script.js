@@ -1,3 +1,4 @@
+//changing html and css
 const mug = document.getElementsByClassName('mugshot')[0];
 console.log(mug);
 mug.style.background = "url(img/chad.jpg)";
@@ -26,8 +27,12 @@ challengeBox.addEventListener('click',function(){
     image.style.width = "50px";
     image.style.height = "50px";
     image.style.position = "absolute";
-    image.style.left = `${Math.round(Math.random()*challengeBoxRect.width)+challengeBoxRect.x}px`;
-    image.style.top = `${Math.round(Math.random()*challengeBoxRect.height)+ challengeBoxRect.y}px`;
+    let x1 = challengeBoxRect.x + 50;
+    let x2 = x1 + (challengeBoxRect.width - 50);
+    let y1 = challengeBoxRect.y + 50;
+    let y2 = y1 +(challengeBoxRect.height - 50);
+    image.style.left = `${Math.round(Math.random()*(x2 - x1)) + challengeBoxRect.x}px`;
+    image.style.top = `${Math.round(Math.random()*(y2 - y1)) + challengeBoxRect.y}px`;
     challengeBox.appendChild(image);
     console.log(image.style.left)
 })
