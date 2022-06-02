@@ -23,7 +23,10 @@ const challengeBoxRect = challengeBox.getBoundingClientRect();
 console.log(challengeBoxRect);
 challengeBox.addEventListener('click',function(){
     const image = document.createElement('img');
-    image.src = "img/shrimp.png";
+    const shrimps = ["img/shrimp.png","img/shrimp2.png","img/shrimp3.png","img/shrimp4.png","img/shrimp5.png","img/shrimp6.png","img/shrimp7.png","img/shrimp8.png","img/shrimp9.png","img/shrimp10.png"];
+    let index = Math.round(Math.random()*(shrimps.length-1));
+    image.src = shrimps[index];
+    console.log(image.src,index);
     image.style.width = "50px";
     image.style.height = "50px";
     image.style.position = "absolute";
