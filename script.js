@@ -27,6 +27,7 @@ challengeBox.addEventListener('click',function(){
     image.style.width = "50px";
     image.style.height = "50px";
     image.style.position = "absolute";
+    image.style.transition = "all 0.5s ease-in-out";
     let x1 = challengeBoxRect.x + 50;
     let x2 = x1 + (challengeBoxRect.width - 50);
     let y1 = challengeBoxRect.y + 50;
@@ -35,4 +36,7 @@ challengeBox.addEventListener('click',function(){
     image.style.top = `${Math.round(Math.random()*(y2 - y1)) + challengeBoxRect.y}px`;
     challengeBox.appendChild(image);
     console.log(image.style.left)
+    image.addEventListener('click',function(){
+        this.style.transform = "rotate(360deg";
+    })
 })
