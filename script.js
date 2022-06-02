@@ -14,4 +14,17 @@ gridQuery[3].innerText = "Koala";
 gridQuery[5].innerText = "soccer/football";
 gridQuery[7].innerText = "Corazon / doflamingo rosinanté";
 gridQuery[9].innerText = "Robin Williams RIP";
-gridQuery[11].innerText = "lazy , handy , supersmart (like superpower)"
+gridQuery[11].innerText = "lazy , handy , supersmart (like superpower)";
+//challenge
+const challengeBox = document.getElementsByClassName('challenge-box')[0];
+console.log(challengeBox);
+const challengeBoxRect = challengeBox.getBoundingClientRect();
+console.log(challengeBoxRect);
+challengeBox.addEventListener('click',function(){
+    const image = document.createElement('img');
+    image.src = "img/shrimp.png";
+    image.style.width = "50px";
+    image.style.height = "50px";
+    image.style.position = "absolute";
+    challengeBox.appendChild(image);
+})
