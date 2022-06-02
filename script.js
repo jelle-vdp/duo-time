@@ -44,3 +44,14 @@ challengeBox.addEventListener('click',function(){
         this.style.transform = 'rotate('+(deg+=360)+'deg)';
     })
 })
+let entireTxt = document.body.innerText;
+console.log(entireTxt);
+const txtArray = entireTxt.split('\n');
+console.log(txtArray);
+/*for (let i = 0 ; i < txtArray.lentgh ; i++){
+    console.log(txtArray[i]);
+    txtArray[i].addEventListener('click', function(){
+        txtArray[i] = "shrimp";
+        
+    })
+}*/
