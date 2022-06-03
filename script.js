@@ -44,15 +44,33 @@ challengeBox.addEventListener('click',function(){
         this.style.transform = 'rotate('+(deg+=360)+'deg)';
     })
 })
-let entireTxt = document.body.innerText;
-console.log(entireTxt);
-const txtArray = entireTxt.split('\n');
-console.log(txtArray);
-const spans = [];
-/*for (let i = 0 ; i < txtArray.length ; i++){
-    //console.log(txtArray[i]);
-    txtArray[i] = `<span class="loop">${txtArray.innerText}</span>`;
-    spans.push(txtArray[i]);
-    //console.log(spans);
-}*/
-
+let elements = [];
+const header = document.getElementsByTagName('header')[0];
+//console.log(header);
+let headerH1 = header.getElementsByTagName('h1')[0];
+headerH1.innerHTML = `<span>${headerH1.innerText}</span>`;
+//console.log(headerH1.innerText)
+let headerQuote = header.getElementsByTagName('q')[0];
+headerQuote.innerHTML = `<span>${headerQuote.innerText}</span>`;
+const section = document.getElementsByClassName('grid-qualities')[0];
+//console.log(section);
+let sectionDivs = section.getElementsByTagName('div');
+//console.log(sectionDivs)
+for (let i = 0 ; i<sectionDivs.length;i++){
+    sectionDivs[i].innerHTML = `<span>${sectionDivs[i].innerText}</span>`;
+}
+const challenges = document.getElementsByClassName('challenge')[0];
+console.log(challenges);
+const challengesParagrafs = challenges.getElementsByTagName('p');
+console.log(challengesParagrafs);
+for (let i = 0 ; i < challengesParagrafs.length ; i++){
+    challengesParagrafs[i].innerHTML = `<span>${challengesParagrafs[i].innerText}</span>`;
+}
+setTimeout(() => {
+    const text = document.getElementsByTagName('span');
+    for (let i = 0 ; i<text.length;i++){
+        text[i].addEventListener('click',function(){
+            this.innerText = "shrimp";
+        })
+    }
+}, 3000);
