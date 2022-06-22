@@ -1,5 +1,5 @@
 # Title: Duo Time
-Link: https://jelle-vdp.github.io/duo-time/
+Link: https://jelle-vdp.github.io/js-duo-time/
 
 - Repository: duo-time
 - Type of Challenge: Learning Challenge
